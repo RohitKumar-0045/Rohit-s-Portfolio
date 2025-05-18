@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppin', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #b3acac;
+    font-weight: 800;
+    transition: 0.5s ease;
+    position: sticky;
+    border-right: 10ch;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b3acac;
+    border-bottom: 3px solid #b3acac;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    padding: 5rem 9% 2rem;
+}
+
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b3acac;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    min-width: 280px;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.typing-text span {
+    position: relative;
+    padding-right: 10px; 
+}
+
+.typing-text span::before {
+    content: "Software Developer"; 
+    color: #b3acac;
+    animation: words 20s infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Web Developer";
+    }
+    21%, 40% {
+        content: "Software Developer";
+    }
+    41%, 60% {
+        content: "Web Designer";
+    }
+    61%, 80% {
+        content: "Youtuber";
+    }
+    81%, 100% {
+        content: "ScriptWriter";
+    }
+}
+
+
+@keyframes blink {
+    50% {
+        border-left: 3px solid transparent;
+    }
+    100% {
+        border-left: 3px solid #b3acac;
+    }
+}
+
+
+#textt {
+    font-size: 2.4rem; 
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-top: auto; 
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #b3acac;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 1rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b3acac;
+    box-shadow: 0 0 25px #b3acac;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem; 
+    background-color: black;
+    border-radius: 3rem;  
+    font-size: 1.6rem; 
+    color: #b3acac;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    border: 2px solid #b3acac; 
+    transition: 0.3s ease;
+    margin-top: 2rem; 
+    text-align: center; 
+    line-height: 1.6; 
+}
+.btn:hover {
+    transform: scale3d(1.05); 
+    background-color: #b3acac;
+    color: black;
+    box-shadow: 0 0 25px #b3acac;
+}
+
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 100px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home.home-content h3 {
+        font-size: 2.5rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
